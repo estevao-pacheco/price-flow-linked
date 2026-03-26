@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #Gmail
+SMTP_SERVER = environ.get('SMTP_SERVER')
+SMTP_PORT = environ.get('SMTP_PORT')
+EMAIL_REMETENTE = environ.get('EMAIL_REMETENTE')
 GMAIL_KEY = environ.get('GMAIL_KEY')
 
 # 🔐 Credenciais

@@ -3,7 +3,7 @@ import smtplib
 from config import LISTING_MAPPING
 from datetime import datetime, timedelta
 from email.message import EmailMessage
-from config import GMAIL_KEY
+from config import GMAIL_KEY, SMTP_PORT, SMTP_SERVER, EMAIL_REMETENTE
 from services.cstech_client import get_prices
 from services.xtay_client import send_prices
 from services.transformer import (
@@ -12,11 +12,11 @@ from services.transformer import (
 )
 
 # CONFIGURAÇÕES DE E-MAIL (GMAIL)
-SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
-EMAIL_REMETENTE = "desenvolvimento@xtay.com.br"
+SMTP_SERVER = SMTP_SERVER
+SMTP_PORT = SMTP_PORT
+EMAIL_REMETENTE = EMAIL_REMETENTE
 EMAIL_SENHA = GMAIL_KEY
-EMAIL_DESTINO = ["desenvolvimento@xtay.com.br"]
+EMAIL_DESTINO = ["desenvolvimento@xtay.com.br, jaqueline.pires@linkeds.com.br, gabriel.fumagalli@xtay.com.br"]
 
 # DIRETÓRIO
 pasta = r"C:\Users\XTAY\OneDrive - Atrio Hotéis S A\Documentos\Projetos\coisasdastays\price_sync\Data"
